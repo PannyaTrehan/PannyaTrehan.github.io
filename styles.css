@@ -20,16 +20,41 @@ h2 {
     background-color: #9a08d9;
 }
 
-#facialSkin button {
+#facial button {
     background-color: blue;
+    margin-bottom: 10px;
 }
 
 #waxing button {
     background-color: red;
 }
 
+#colour button {
+    background-color: rgb(129, 211, 7);
+}
+
+#keratin button {
+    background-color: #008CBA;
+}
+
+#foils button {
+    background-color: sienna;
+}
+
+#threading button {
+    background-color: rgb(221, 0, 255);
+}
+
+#balayage button {
+    background-color: cornflowerblue;
+}
+
+#hairSpa button {
+    background-color: darkkhaki;
+}
+
 #hairServices,
-#facialSkin,
+#facial,
 #waxing,
 #calculations {
     text-align: center;
@@ -83,6 +108,14 @@ h4 {
     padding: 0;
 }
 
+#receiptList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+
 .removeItem {
     background-color: black;
     color: white;
@@ -95,5 +128,5 @@ h4 {
 }
 
 .removeItem:hover {
-    background-color: black;
+    background-color: darkgray;
 }
