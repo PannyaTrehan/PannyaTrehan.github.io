@@ -56,7 +56,13 @@ h2 {
 #hairServices,
 #facial,
 #waxing,
-#calculations {
+#calculations,
+#colour,
+#keratin,
+#foils,
+#threading,
+#balayage,
+#hairSpa {
     text-align: center;
     margin: 0 auto;
 }
