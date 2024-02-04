@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update HTML elements
         priceElement.textContent = `Price: $${total.toFixed(2)}`;
-        gstElement.textContent = `GST (15%): $${gst.toFixed(2)}`;
+        gstElement.textContent = `GST (10%): $${gst.toFixed(2)}`;
         totalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
     }
 });
