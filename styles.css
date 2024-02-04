@@ -16,16 +16,27 @@ h2 {
     color: #333;
 }
 
+#hairServices button {
+    background-color: #9a08d9;
+}
+
+#facialSkin button {
+    background-color: blue;
+}
+
+#waxing button {
+    background-color: red;
+}
+
 #hairServices,
 #facialSkin,
-#waxing {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Adjust the gap between buttons */
+#waxing,
+#calculations {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .product {
-    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -61,8 +72,28 @@ h2 {
     margin-top: 10px;
 }
 
-#receipt {
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
+#Price,
+#GST,
+#Total {
+    font-weight: bold;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.removeItem {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 4px 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.removeItem:hover {
+    background-color: black;
 }

@@ -36,12 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             addPurchase(productId);
             updateTotal(productPrice);
             updateReceipt();
-        });
-    });
-
-    const totalButton = document.querySelectorAll('#getTotal');
-    totalButton.forEach(button => {
-        button.addEventListener('click', function() {
             updatePrice();
         });
     });
@@ -66,17 +60,34 @@ document.addEventListener('DOMContentLoaded', function() {
         purchases.length = 0;
         selectedItems.length = 0;
         updateReceipt();
+        updatePrice();
     }
 
     function updateReceipt() {
         const receiptList = document.getElementById('receiptList');
         receiptList.innerHTML = '';
-
-        selectedItems.forEach(item => {
+    
+        selectedItems.forEach((item, index) => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${item.name}...$${item.price}`;
+            listItem.innerHTML = `<span>${item.name}...$${item.price}</span> <button class="removeItem" data-index="${index}">Remove</button>`;
             receiptList.appendChild(listItem);
         });
+    
+        // Add event listeners for remove buttons
+        const removeButtons = document.querySelectorAll('.removeItem');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const indexToRemove = parseInt(this.getAttribute('data-index'));
+                removeItem(indexToRemove);
+            });
+        });
+    }
+
+    function removeItem(index) {
+        const removedItem = selectedItems.splice(index, 1)[0];
+        total -= removedItem.price;
+        updateReceipt();
+        updatePrice();
     }
 
     // Function to update the displayed price
